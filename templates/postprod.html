@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {{ content }}!</title>
+</head>
+<body>
+
+<h1>this is the funny result</h1>
+<img src="{{ url_for('static', filename=funny_png_filename ) }}"/>
+</body>
+
+<body>
+<h1>this is another funny funny result</h1>
+{% block content %}
+    {{ html_data | safe }}
+{% endblock %}
+</body>
+</html>
